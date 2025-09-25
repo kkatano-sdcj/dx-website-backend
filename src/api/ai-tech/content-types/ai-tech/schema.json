@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_techs",
+  "info": {
+    "singularName": "ai-tech",
+    "pluralName": "ai-techs",
+    "displayName": "AI技術"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data_id": {
+      "type": "uid"
+    },
+    "contents": {
+      "type": "text"
+    },
+    "created_data": {
+      "type": "date"
+    },
+    "updated_date": {
+      "type": "date"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
