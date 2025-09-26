@@ -15,6 +15,6 @@ export default ({ env }) => ({
       },
     },
     'content-type-builder': {
-      enabled: env.bool('CONTENT_TYPE_BUILDER_ENABLED', true),
+      enabled: true, //env.bool('CONTENT_TYPE_BUILDER_ENABLED', true),
     },
   });
