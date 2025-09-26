@@ -1,4 +1,7 @@
 module.exports = ({ env }) => ({
+  'content-type-builder': {
+    enabled: true,
+  },
   upload: {
     config: {
       provider: 'strapi-provider-upload-azure-sa', // または '@simoesmario/strapi-provider-upload-azure-storage'
