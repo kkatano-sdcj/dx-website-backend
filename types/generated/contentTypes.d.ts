@@ -413,7 +413,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiAiTechAiTech extends Struct.CollectionTypeSchema {
   collectionName: 'ai_techs';
   info: {
-    displayName: 'AI\u6280\u8853';
+    displayName: 'AI\u6280\u8853\u89E3\u8AAC';
     pluralName: 'ai-techs';
     singularName: 'ai-tech';
   };
@@ -421,12 +421,36 @@ export interface ApiAiTechAiTech extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    contents: Schema.Attribute.Text;
-    created_data: Schema.Attribute.Date;
+    abstruct: Schema.Attribute.String;
+    author: Schema.Attribute.String;
+    categories: Schema.Attribute.Enumeration<
+      [
+        'all',
+        'programming',
+        'database',
+        'infrastructure',
+        'web',
+        'security',
+        'ai',
+        'vibecoding',
+      ]
+    >;
+    contents_type: Schema.Attribute.Enumeration<
+      [
+        'ai_news',
+        'company_news',
+        'events',
+        'learning',
+        'padcast',
+        'tech-explanation',
+      ]
+    >;
+    created_date: Schema.Attribute.Date;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     data_id: Schema.Attribute.UID;
+    excerpt: Schema.Attribute.RichText;
     image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -438,10 +462,12 @@ export interface ApiAiTechAiTech extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updated_date: Schema.Attribute.Date;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    views: Schema.Attribute.BigInteger;
   };
 }
 

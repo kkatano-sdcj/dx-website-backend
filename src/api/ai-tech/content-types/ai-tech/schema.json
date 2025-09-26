@@ -4,7 +4,7 @@
   "info": {
     "singularName": "ai-tech",
     "pluralName": "ai-techs",
-    "displayName": "AI技術"
+    "displayName": "AI技術解説"
   },
   "options": {
     "draftAndPublish": true
@@ -14,14 +14,25 @@
     "data_id": {
       "type": "uid"
     },
-    "contents": {
-      "type": "text"
+    "title": {
+      "type": "string"
     },
-    "created_data": {
-      "type": "date"
+    "abstruct": {
+      "type": "string"
     },
-    "updated_date": {
-      "type": "date"
+    "excerpt": {
+      "type": "richtext"
+    },
+    "contents_type": {
+      "type": "enumeration",
+      "enum": [
+        "ai_news",
+        "company_news",
+        "events",
+        "learning",
+        "padcast",
+        "tech-explanation"
+      ]
     },
     "image": {
       "type": "media",
@@ -32,6 +43,31 @@
         "videos",
         "audios"
       ]
+    },
+    "categories": {
+      "type": "enumeration",
+      "enum": [
+        "all",
+        "programming",
+        "database",
+        "infrastructure",
+        "web",
+        "security",
+        "ai",
+        "vibecoding"
+      ]
+    },
+    "created_date": {
+      "type": "date"
+    },
+    "updated_date": {
+      "type": "date"
+    },
+    "views": {
+      "type": "biginteger"
+    },
+    "author": {
+      "type": "string"
     }
   }
 }
